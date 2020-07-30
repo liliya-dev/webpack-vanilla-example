@@ -37,6 +37,12 @@
 
 import './styles/style.scss';
 import loading1Img from './images/loading/loading1.png';
+import loading2Img from './images/loading/loading4.png';
+import loading3Img from './images/loading/loading3.png';
+import loading4Img from './images/loading/loading5.png';
+import {hidePictures} from './scripts/hideHeader';
+
+// console.log(loading2Img)
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -47,7 +53,7 @@ for (let i = 1; i < 7; i = i + 2) {
     repeat: -1,
     yoyo: true,
     // animationDirection: 'power1.alternate',
-    duration: 7,
+    duration: 5,
     delay: 1,
     ease: 'power1.ease-in-out',
     motionPath: {
@@ -67,7 +73,7 @@ for (let i = 2; i < 7; i = i + 2) {
     repeat: -1,
     yoyo: true,
     // animationDirection: 'power1.alternate',
-    duration: 7,
+    duration: 5,
     delay: 1,
     ease: 'power1.ease-in-out',
     motionPath: {
@@ -81,26 +87,39 @@ for (let i = 2; i < 7; i = i + 2) {
 }
 
 const headerCenter = document.querySelector('.header__center');
-const loading = document.querySelector('.loading');
+const loading = document.querySelector('.loading-page');
 const loadingText = document.querySelector('.loading__text');
 const loadingImg = document.querySelector('.loading__img');
+const images = document.querySelectorAll('.header-img');
 
 headerCenter.addEventListener('click', function() {
   hidePictures();
   changeNumbers();
 });
 
-function hidePictures() {
-  const images = document.querySelectorAll(`.header-img`);
 
-  for (const img of images) {
-    img.style.display = 'none';
-  }
-}
 
 loadingImg.addEventListener('click', function() {
-  loadingImg.src = loading1Img;
+  loadingImg.src = 'images/loading3.png';
+  // console.log(loading1Img)
 });
+
+// let i = 1;
+// function changePagesAfterFinish() {
+//   const v = setInterval(() => {
+//     if(i === 6) {
+//       console.log(i)
+//       loading.style.transform = `translateY(-200vh)`
+//       clearInterval(v);
+//     }
+
+//     loadingImg.src = `images/loading${i}.png`;
+//     i++
+
+
+//   }, 100)
+
+// }
 
 function changeNumbers() {
   loading.style.display = 'block';
@@ -108,11 +127,25 @@ function changeNumbers() {
   let number = 1;
 
   const timerNumber = setInterval(() => {
-    number++;
+    if(number % 20 === 0) {
+      let i=number/20 % 6
+      console.log(i)
+      loadingImg.src = `images/loading${i===0 ? 1 : i}.png`;
+    }
 
-    if (number === 100) {
+    if (number > 220) {
+      loading.style.transform = `translateY(-200vh)`
+      for (const img of images) {
+        img.style.display = 'block';
+      }
       clearInterval(timerNumber);
     }
-    loadingText.textContent = number;
-  }, 20);
+
+    if (number <= 100) {
+      loadingText.textContent = number;
+    }
+    number++;
+  }, 10);
 }
+
+
