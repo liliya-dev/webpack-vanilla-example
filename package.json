@@ -15,6 +15,7 @@
     "css-loader": "^3.4.1",
     "cssnano": "^4.1.0",
     "file-loader": "^5.0.2",
+    "gh-pages": "^3.1.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
@@ -32,7 +33,15 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --config=config/webpack.dev.js",
-    "build": "webpack --config=config/webpack.prod.js"
+    "build": "webpack --config=config/webpack.prod.js git add dist ",
+    "lint:js": "eslint ./src",
+    "lint:css": "stylelint ./src",
+    "lint:html": "linthtml ./src",
+    "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\" \"npm run lint:html\"",
+    "test": "jest ./src",
+    "predeploy": "npm run build",
+    "pre-push": "npm test",
+    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
