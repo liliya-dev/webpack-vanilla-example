@@ -36,6 +36,7 @@
 //   .addTo(controller);
 
 import './styles/style.scss';
+import loading1Img from './images/loading/loading1.png';
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -98,7 +99,7 @@ function hidePictures() {
 }
 
 loadingImg.addEventListener('click', function() {
-  loadingImg.src = './images/loading/loading1.png';
+  loadingImg.src = loading1Img;
 });
 
 function changeNumbers() {
