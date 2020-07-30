@@ -1,0 +1,28 @@
+@import "vars.scss";
+
+.clients {
+  padding: 40px 0 60px;
+  width: 92%;
+  display: flex;
+  max-width: $max-width;
+
+  &__text {
+    width: 22%;
+  }
+
+  &__list {
+    width: 45%;
+  }
+
+  &__wrapper {
+    width: 31%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__view-all {
+    text-decoration: none;
+  }
+}
