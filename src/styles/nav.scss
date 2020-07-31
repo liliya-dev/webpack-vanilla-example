@@ -1,0 +1,40 @@
+@import 'vars.scss';
+
+.nav {
+  position: absolute;
+  top: 0;
+
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  &__contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+  }
+
+  &__img-wrapper--bg {
+    background-color: $main-text-color2;
+    padding: 0.9vw;
+    border-radius: 50%;
+  }
+
+  &__img-wrapper--bg-no {
+    padding: 0.9vw;
+    border-radius: 50%;
+  }
+
+  &__contact--white {
+    color: $main-text-color2;
+  }
+
+  &__contact--dark {
+    color: $text-color;
+  }
+}
+
+span {
+  display: block;
+}

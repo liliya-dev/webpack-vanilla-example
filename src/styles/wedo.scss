@@ -1,0 +1,90 @@
+@import 'vars.scss';
+
+.wedo {
+  padding: 4%;
+  width: 100%;
+  height: 56vw;
+
+  background-color: $wedo-section-color;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__left,
+  &__right {
+    width: 42%;
+    position: relative;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 80%;
+    opacity: 0.5;
+  }
+
+  &__small-img {
+    position: absolute;
+
+    &--1 {
+      left: 0;
+      top: 10%;
+    }
+
+    &--2 {
+      left: 95%;
+      top: 50%;
+
+    }
+
+    &--3 {
+      left: 5%;
+      bottom: 20%;
+    }
+  }
+
+  &__main-img {
+    width: 90%;
+  }
+
+  &__name {
+    display: inline-block;
+    width: 70%;
+
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: left;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 30%;
+    margin-bottom: 1.5vw;
+
+    background-color: $wedo-item-color;
+    border-radius: 1vw;
+    transition: background-color 1s;
+
+    &--active {
+      background-color: $main-bg-color2;
+      width: 30%;
+      margin-bottom: 1.5vw;
+      border-radius: 1vw;
+      transition: background-color 1s;
+    }
+
+    &:hover {
+      background-color: $main-bg-color2;
+    }
+  }
+}

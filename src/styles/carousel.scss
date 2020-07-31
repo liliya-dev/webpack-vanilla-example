@@ -1,0 +1,38 @@
+@import "vars.scss";
+
+.carousel {
+  display: flex;
+  width: 83%;
+  overflow: hidden;
+
+  &__button {
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    color: $text-color;
+    background-color: $section-bg;
+
+    padding: 1.5vw 1vw;
+    text-align: center;
+    transition: 1s;
+
+    &:hover {
+      background-color: $main-bg-color2;
+      color: $main-text-color2;
+    }
+  }
+
+  &__item {
+    margin-right: 2%;
+    width: 23%;
+    min-width: 23%;
+    position: relative;
+    transition: 1s;
+  }
+
+  &__img {
+    border-radius: 1vw;
+    width: 100%;
+  }
+}

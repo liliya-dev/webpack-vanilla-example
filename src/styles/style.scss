@@ -1,8 +1,12 @@
 @import "header.scss";
+@import "nav.scss";
 @import "clients.scss";
 @import "vars.scss";
 @import "typography.scss";
+@import "wedo.scss";
 @import "team.scss";
+@import "contacts.scss";
+@import "carousel.scss";
 
 body {
   font-family: "Archivo", sans-serif;
@@ -20,20 +24,9 @@ ul {
 }
 
 .logo {
-  color: hsl(353, 83%, 45%);
-  font-size: 26px;
-}
-
-.animation {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.fly {
-  position: relative;
-  left: 80px;
-  top: 0;
+  color: hsl(353, 96%, 44%);
+  font-size: 2vw;
+  font-weight: bold;
 }
 
 * {
@@ -44,62 +37,18 @@ ul {
   list-style: none;
 }
 
-.contacts {
-  background-color: hsl(295, 92%, 5%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 12vw;
-  width: 100%;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 46px;
-  text-align: center;
-  z-index: 12;
-  max-height: 12vw;
 
-  color: #FFFFFF;
+html {
+  cursor: none;
+}
 
-  &__img{
-    width: 2vw;
-    margin-left: 2vw;
-    transition: 1s;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  &__wrapper {
-    position:relative;
-    display:inline-block;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-
-    &:before {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 0;
-      background: hsl(353, 83%, 45%);
-      z-index: -1;
-      content: '';
-      height: 100%;
-    }
-
-    &:hover .contacts__img {
-      transform: rotate(45deg);
-    }
-
-    &:hover::before {
-      animation: bg-animation 0.6s 1;
-      animation-fill-mode: forwards;
-    }
-  }
+.cursor {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 15;
 }
 
 @keyframes bg-animation {

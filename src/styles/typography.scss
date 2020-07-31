@@ -1,27 +1,27 @@
 @import "vars.scss";
 
 h2 {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 2.8vw;
+  line-height: 2.8vw;
   color: #383030;
   font-weight: 700px;
-  margin-bottom: 20px;
+  margin-bottom: 1.4vw;
 }
 
 h3 {
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 3.5vw;
+  line-height: 3.5vw;
   color: hsl(0, 0%, 100%);
-  margin: 20px 0;
+  margin: 1.5vw 0;
 }
 
 h4 {
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 0.8vw;
+  line-height: 1vw;
   text-align: center;
   letter-spacing: 0.428571px;
 }
@@ -30,41 +30,89 @@ a {
   text-decoration: none;
 }
 
+.header {
+  &__number {
+    margin: 1vw 0;
+    font-weight: bold;
+    font-size: 2.3vw;
+    line-height: 2.3vw;
+    text-transform: uppercase;
+    color: $main-text-color2;
+  }
+
+  &__notes {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1vw;
+    line-height: 1vw;
+    color: $text-color-header;
+  }
+
+  &__viewers {
+    font-weight: 500;
+    font-size: 1.1vw;
+    line-height: 1.1vw;
+    text-transform: uppercase;
+    color: $main-text-color2;
+  }
+}
+
 .general-text {
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1.2vw;
+  line-height: 1.8vw;
   color: hsl(315, 25%, 31%);
 }
 
 .names {
-  font-size: 16px;
-  line-height: 17px;
+  font-size: 1.2vw;
+  line-height: 1.8vw;
   color: $names-color;
 }
 
 .clients__view-all {
-  font-size: 12px;
+  font-size: 0.8vw;
   color: hsl(353, 83%, 45%);
 }
 
 .clients__link {
-  font-size: 12px;
-  line-height: 13px;
+  font-size: 0.8vw;
+  line-height: 0.9vw;
 }
 
 .clients__name {
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 17px;
-  padding: 10px 0;
+  font-size: 1.2vw;
+  line-height: 1.3vw;
+  padding: 0.7vw 0;
   color: #383030
 }
 
 .wedo__name {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 46px;
+  font-size: 2.5vw;
+  line-height: 3vw;
   text-align: center;
   color: hsl(0, 0%, 100%);
+}
+
+.contacts {
+  font-weight: bold;
+  font-size: 2.3vw;
+  line-height: 3.1;
+  text-align: center;
+}
+
+.carousel__button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+
+.nav__contact {
+  font-weight: bold;
+  font-size: 1vw;
+  line-height: 1vw;
+  text-transform: uppercase;
 }
