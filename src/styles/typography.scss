@@ -8,6 +8,14 @@ h2 {
   margin-bottom: 20px;
 }
 
+h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 40px;
+  color: hsl(0, 0%, 100%);
+}
+
 a {
   text-decoration: none;
 }
@@ -27,4 +35,12 @@ a {
 .clients__view-all {
   font-size: 12px;
   color: hsl(353, 83%, 45%);
+}
+
+.wedo__name {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
 }

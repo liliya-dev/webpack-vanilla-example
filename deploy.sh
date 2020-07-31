@@ -1,7 +1,7 @@
-git add -f ./build
-git commit -m "build"
-git push --delete origin gh-pages
-git subtree --prefix build push origin gh-pages
-git reset HEAD^ --soft
-rm -rf ./build
-git reset -- ./build
+sudo git add -f ./build
+sudo git commit -m "build"
+sudo git push --delete origin gh-pages
+sudo git subtree --prefix build push origin gh-pages
+sudo git reset HEAD^ --soft
+sudo rm -rf ./build
+sudo git reset -- ./build

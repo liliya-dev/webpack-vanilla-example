@@ -1,10 +1,12 @@
 @import "vars.scss";
 
 .clients {
-  padding: 40px 0 60px;
-  width: 92%;
+  padding: 40px 4% 60px;
+  width: 100%;
   display: flex;
   max-width: $max-width;
+  background-color: $section-bg;
+  z-index: 5;
 
   &__text {
     width: 22%;
@@ -24,5 +26,86 @@
 
   &__view-all {
     text-decoration: none;
+  }
+}
+
+.wedo {
+  padding: 4%;
+  width: 100%;
+  height: 56vw;
+  background-color: #170119;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+
+  &__left,
+  &__right {
+    width: 42%;
+    position: relative;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 80%;
+    opacity: 0.5;
+  }
+
+  &__small-img {
+    position: absolute;
+
+    &--1 {
+      left: 0;
+      top: 10%;
+    }
+
+    &--2 {
+      left: 95%;
+      top: 50%;
+
+    }
+
+    &--3 {
+      left: 5%;
+      bottom: 20%;
+    }
+  }
+
+  &__main-img {
+    width: 90%;
+  }
+
+  &__name {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: rgba(100, 60, 90, 0.2);
+    border-radius: 12px;
+    transition: background-color 1s;
+
+    &--active {
+      background-color: hsl(353, 96%, 44%);
+      width: 30%;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      transition: background-color 1s;
+    }
+
+    &:hover {
+      background-color: hsl(353, 96%, 44%);
+    }
   }
 }
