@@ -1,0 +1,92 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 5vw;
+  position: relative;
+
+  &__decor {
+    position: absolute;
+
+    &--1 {
+      bottom: -10vw;
+      right: 0;
+    }
+
+    &--3 {
+      bottom: -10vw;
+      left: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+    padding: 0 3%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1vw;
+    padding: 40% 20%;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    background-color: hsl(353, 96%, 44%);
+    opacity: 0;
+    transition: opacity 1s;
+    text-align: center;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+
+.carousel {
+  display: flex;
+  width: 83%;
+  overflow: hidden;
+
+  &__button {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #161415;
+    border: none;
+    background-color: #ffecee;
+    border-radius: 50%;
+    padding: 1.5vw 1vw;
+    text-align: center;
+    transition: 1s;
+    outline: none;
+
+    &:hover {
+      background-color: hsl(353, 96%, 44%);
+      color: white;
+    }
+  }
+
+  &__item {
+    margin-right: 2%;
+    width: 23%;
+    min-width: 23%;
+    position: relative;
+    transition: 1s;
+
+  }
+
+  &__img {
+    border-radius: 1vw;
+    width: 100%;
+  }
+}

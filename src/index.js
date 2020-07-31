@@ -10,6 +10,7 @@ import img4 from './images/wedo/wedoBig4.png';
 import img5 from './images/wedo/wedoBig5.png';
 import img6 from './images/wedo/wedoBig6.png';
 import { startLoadingListener } from './scripts/startLoading';
+import './scripts/carousel';
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -53,23 +54,23 @@ const headerCenter = document.querySelector('.header__center');
 
 headerCenter.addEventListener('click', startLoadingListener, false);
 
-const controller = new ScrollMagic.Controller({
-  globalSceneOptions: {
-    triggerHook: 'onLeave',
-    duration: '200%',
-  },
-});
+// const controller = new ScrollMagic.Controller({
+//   globalSceneOptions: {
+//     triggerHook: 'onLeave',
+//     duration: '200%',
+//   },
+// });
 
-const slides = document.querySelectorAll('.slider');
+// const slides = document.querySelectorAll('.slider');
 
-for (let i = 0; i < slides.length; i++) {
-  new ScrollMagic.Scene({
-    triggerElement: slides[i],
-  })
-    .setPin(slides[i], { pushFollowers: false })
-    .addIndicators()
-    .addTo(controller);
-}
+// for (let i = 0; i < slides.length; i++) {
+//   new ScrollMagic.Scene({
+//     triggerElement: slides[i],
+//   })
+//     .setPin(slides[i], { pushFollowers: false })
+//     .addIndicators()
+//     .addTo(controller);
+// }
 
 const wedo = document.querySelector('.wedo__list');
 const wedoMainImg = document.querySelector('.wedo__main-img');

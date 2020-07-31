@@ -54,11 +54,8 @@ function changeNumbers() {
 
 const width = header.clientWidth / 2;
 const height = header.clientHeight / 2;
-// const innerCursor = document.querySelector('.header__cursor')
 
 const moveText = () => {
-  // header.style.cursor = "none";
-  // innerCursor.style.display = "block";
   header.addEventListener('mouseover', (event) => {
     const clientX = event.clientX;
     const clientY = event.clientY;

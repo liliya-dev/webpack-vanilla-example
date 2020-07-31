@@ -4,7 +4,8 @@
   padding: 40px 4% 60px;
   width: 100%;
   display: flex;
-  max-width: $max-width;
+  width: 100%;
+  justify-content: space-between;
   background-color: $section-bg;
   z-index: 5;
 
@@ -14,14 +15,92 @@
 
   &__list {
     width: 45%;
+    display: flex;
+    justify-content: space-between;
   }
 
-  &__wrapper {
+  &__column {
     width: 31%;
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(even) {
+      margin-top: 3vw;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+
+    &--1::after {
+      content: url('../images/clients/torus-2.png');
+      position: absolute;
+      width: 150%;
+      height: 30vw;
+      right: 40%;
+      top: -20%;
+    }
+
+    &--2::after {
+      content: url('../images/clients/sphere.png');
+      position: absolute;
+      right: 70%;
+      top: 50%;
+    }
+
+    &--3::after {
+      content: url('../images/clients/YOUT.png');
+      position: absolute;
+      left: 50%;
+      top: 30%;
+    }
+  }
+
+  &__info-wrapper {
+    width: 100%;
+    position: relative;
+    border-radius: 1vw;
+  }
+
+  &__info {
+    border-radius: 1vw;
+    height: 16vw;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10%;
+
+    text-align: center;
+
+    color: white;
+    background-color: hsl(353, 96%, 44%);
+    opacity: 0;
+    transition: opacity 1s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__link {
+    color: white;
   }
 
   &__img {
     width: 100%;
+    height: 16vw;
+    border-radius: 1vw;
   }
 
   &__view-all {
@@ -93,14 +172,14 @@
     width: 30%;
     margin-bottom: 20px;
     background-color: rgba(100, 60, 90, 0.2);
-    border-radius: 12px;
+    border-radius: 1vw;
     transition: background-color 1s;
 
     &--active {
       background-color: hsl(353, 96%, 44%);
       width: 30%;
       margin-bottom: 20px;
-      border-radius: 12px;
+      border-radius: 1vw;
       transition: background-color 1s;
     }
 
