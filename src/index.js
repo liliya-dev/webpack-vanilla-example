@@ -54,23 +54,24 @@ const headerCenter = document.querySelector('.header__center');
 
 headerCenter.addEventListener('click', startLoadingListener, false);
 
-// const controller = new ScrollMagic.Controller({
-//   globalSceneOptions: {
-//     triggerHook: 'onLeave',
-//     duration: '200%',
-//   },
-// });
+const controller = new ScrollMagic.Controller({
+  globalSceneOptions: {
+    triggerHook: 'onLeave',
+    duration: '100%',
+  },
+});
 
-// const slides = document.querySelectorAll('.slider');
+const slides = document.querySelectorAll('.slider');
+console.log(slides)
 
-// for (let i = 0; i < slides.length; i++) {
-//   new ScrollMagic.Scene({
-//     triggerElement: slides[i],
-//   })
-//     .setPin(slides[i], { pushFollowers: false })
-//     .addIndicators()
-//     .addTo(controller);
-// }
+for (let i = 0; i < slides.length; i++) {
+  new ScrollMagic.Scene({
+    triggerElement: slides[i],
+  })
+    .setPin(slides[i], { pushFollowers: false })
+    .addIndicators()
+    .addTo(controller);
+}
 
 const wedo = document.querySelector('.wedo__list');
 const wedoMainImg = document.querySelector('.wedo__main-img');

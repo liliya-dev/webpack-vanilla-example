@@ -5,7 +5,6 @@ const header = document.querySelector('.header');
 const width = header.clientWidth;
 const carouselItems = document.querySelectorAll('.carousel__item');
 const maxMargin = -(carouselItems.length - 4) * width * 0.83 * 0.235;
-console.log(maxMargin)
 
 leftButton.addEventListener('click', () => {
   const oldMargin = +firstItem.style.marginLeft.slice(0, -2);
