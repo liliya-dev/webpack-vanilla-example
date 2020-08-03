@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 }
 
 ul {
@@ -39,10 +40,9 @@ ul {
 
 
 html {
-  cursor: none;
-
   &:hover
-  a:hover {
+  a:hover,
+  button:hover {
     cursor: none;
   }
 }
@@ -54,16 +54,14 @@ html {
   position: absolute;
   background-color: red;
   border-radius: 50%;
-  z-index: 15;
+  z-index: 20;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 0.85vw;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  // -webkit-box-shadow: 10px 10px 30vw 30vw rgba(243,81,139,0.9);
-  // -moz-box-shadow: 10px 10px 30vw 30vw rgba(243,81,139,0.9);
-  box-shadow: 10px 10px 30vw 15vw rgba(243,81,139,0.7);
+  box-shadow: 10px 10px 30vw 3vw rgba(243,81,139,0.7);
 }
 
 @keyframes bg-animation {

@@ -8,6 +8,11 @@
   display: flex;
   justify-content: space-between;
 
+  &__img {
+    width: 2vw;
+    height: 2vw;
+  }
+
   &__contact-wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,13 +21,22 @@
   }
 
   &__img-wrapper--bg {
+    width: 3vw;
+    height: 3vw;
     background-color: $main-text-color2;
-    padding: 0.9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
   }
 
   &__img-wrapper--bg-no {
-    padding: 0.9vw;
+    width: 3vw;
+    height: 3vw;
+    padding: 0.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
   }
 

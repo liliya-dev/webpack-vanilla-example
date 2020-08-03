@@ -3,18 +3,18 @@
 h2 {
   font-size: 2.8vw;
   line-height: 2.8vw;
-  color: #383030;
-  font-weight: 700px;
+  color: $names-color;
+  font-weight: 48vw;
   margin-bottom: 1.4vw;
 }
 
 h3 {
   font-style: normal;
   font-weight: normal;
-  font-size: 3.5vw;
-  line-height: 3.5vw;
-  color: hsl(0, 0%, 100%);
-  margin: 1.5vw 0;
+  font-size: 3vw;
+  line-height: 3vw;
+  color: $main-text-color2;
+  margin: 0.5vw 0;
 }
 
 h4 {
@@ -60,7 +60,7 @@ a {
 .general-text {
   font-size: 1.2vw;
   line-height: 1.8vw;
-  color: hsl(315, 25%, 31%);
+  color: $text-color-header;
 }
 
 .names {
@@ -69,31 +69,47 @@ a {
   color: $names-color;
 }
 
-.clients__view-all {
-  font-size: 0.8vw;
-  color: hsl(353, 83%, 45%);
+.clients {
+
+  &__view-all {
+    font-size: 0.8vw;
+    color: $main-bg-color2;
+  }
+
+  &__link {
+    font-size: 0.8vw;
+    line-height: 0.9vw;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2vw;
+    line-height: 1.3vw;
+    padding: 0.7vw 0;
+    color: $names-color;
+  }
 }
 
-.clients__link {
-  font-size: 0.8vw;
-  line-height: 0.9vw;
-}
+.wedo {
+  &__name {
+    font-weight: bold;
+    font-size: 2.5vw;
+    line-height: 3vw;
+    text-align: center;
+    color: $main-text-color2;
+  }
 
-.clients__name {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.2vw;
-  line-height: 1.3vw;
-  padding: 0.7vw 0;
-  color: #383030
-}
+  &__link {
+    font-size: 1vw;
+    line-height: 1.8vw;
+    text-align: center;
+    letter-spacing: 0.428571px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $main-bg-color2;
 
-.wedo__name {
-  font-weight: bold;
-  font-size: 2.5vw;
-  line-height: 3vw;
-  text-align: center;
-  color: hsl(0, 0%, 100%);
+  }
 }
 
 .contacts {

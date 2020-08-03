@@ -54,6 +54,12 @@
     width: 90%;
   }
 
+  &__link {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+  }
+
   &__name {
     display: inline-block;
     width: 70%;
@@ -61,7 +67,7 @@
     position: absolute;
     top: 20%;
     left: 10%;
-    text-align: left;
+    text-align: center;
   }
 
   &__item {
