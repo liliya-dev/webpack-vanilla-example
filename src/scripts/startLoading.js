@@ -54,14 +54,19 @@ function changeNumbers() {
 
 const width = header.clientWidth / 2;
 const height = header.clientHeight / 2;
+const cursor = document.querySelector('.cursor');
 
 const moveText = () => {
-  header.addEventListener('mouseover', (event) => {
+  header.addEventListener('mousemove', (event) => {
     const clientX = event.clientX;
     const clientY = event.clientY;
+    console.log(clientX -width, clientY-height, ',,,,,,,,,')
 
     headerCenter.style.transform = `rotateX(${(height - clientY) / 15}deg)
       rotateY(${(width - clientX) / 35}deg)
       rotateZ(${-(height - clientY) / 105}deg)`;
   });
+
+
+  cursor.style.boxShadow = `10px 10px 30vw 1vw rgba(243,81,139,0.7)`;
 };

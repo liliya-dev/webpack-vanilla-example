@@ -14,15 +14,25 @@
 
   &__decor {
     position: absolute;
+    z-index: 3;
+    transition: 1s;
 
     &--1 {
-      bottom: -10vw;
-      right: 0;
+      bottom: -3vw;
+      left: 5vw;
+      width: 10vw;
+    }
+
+    &--2 {
+      top: -6vw;
+      right: 37vw;
+      width: 20vw;
     }
 
     &--3 {
-      bottom: -10vw;
-      left: 0;
+      bottom: -8vw;
+      right: 8vw;
+      width: 20vw;
     }
   }
 
@@ -48,7 +58,7 @@
 
     color: $main-text-color2;
     background-color: $main-bg-color2;
-    
+
     opacity: 0;
     transition: opacity 1s;
     text-align: center;

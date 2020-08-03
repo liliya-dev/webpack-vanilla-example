@@ -26,5 +26,19 @@ rightButton.addEventListener('click', () => {
   }
 
   firstItem.style.marginLeft = `${newMargin}px`;
-  console.log('v', newMargin);
+});
+
+const carousel = document.querySelector('.team__list');
+const teamDecors = document.querySelectorAll('.team__decor');
+
+carousel.addEventListener('mouseover', () => {
+  for (const teamDecor of teamDecors) {
+    teamDecor.style.transform = 'translate(10%, 15%)';
+  }
+});
+
+carousel.addEventListener('mouseout', () => {
+  for (const teamDecor of teamDecors) {
+    teamDecor.style.transform = 'translate(-10%, -16%)';
+  }
 });

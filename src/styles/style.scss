@@ -40,15 +40,30 @@ ul {
 
 html {
   cursor: none;
+
+  &:hover
+  a:hover {
+    cursor: none;
+  }
 }
 
 .cursor {
-  width: 10px;
-  height: 10px;
+  width: 1vw;
+  height: 1vw;
+  color: white;
   position: absolute;
   background-color: red;
   border-radius: 50%;
   z-index: 15;
+  font-weight: bold;
+  font-size: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // -webkit-box-shadow: 10px 10px 30vw 30vw rgba(243,81,139,0.9);
+  // -moz-box-shadow: 10px 10px 30vw 30vw rgba(243,81,139,0.9);
+  box-shadow: 10px 10px 30vw 15vw rgba(243,81,139,0.7);
 }
 
 @keyframes bg-animation {

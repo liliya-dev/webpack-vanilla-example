@@ -57,7 +57,7 @@ headerCenter.addEventListener('click', startLoadingListener, false);
 const controller = new ScrollMagic.Controller({
   globalSceneOptions: {
     triggerHook: 'onLeave',
-    // duration: '100%',
+    duration: '200%',
   },
 });
 
@@ -118,7 +118,6 @@ wedo.addEventListener('click', (event) => {
 
   for (let i = 1; i < 4; i = i + 1) {
     const tween = gsap.timeline();
-    // const smallImg = document.querySelector(`.wedo__small-img--${i}`);
 
     tween.to(`.wedo__small-img--${i}`, {
       repeat: 1,
@@ -197,3 +196,46 @@ mainDoc.addEventListener('mousemove', (event) => {
   cursor.style.left = event.pageX + 'px';
   cursor.style.top = event.pageY + 'px';
 });
+
+const logos = document.querySelectorAll('.logo');
+
+for (const logo of logos) {
+  logo.addEventListener('mouseover', () => {
+    cursor.style.backgroundColor = 'white';
+  });
+
+  logo.addEventListener('mouseout', () => {
+    cursor.style.backgroundColor = 'hsl(353, 96%, 44%)';
+  });
+}
+
+const contacts = document.querySelectorAll('.nav__contact');
+const navImgs = document.querySelectorAll('.nav__img-wrapper');
+
+for (const contact of contacts) {
+  contact.addEventListener('mouseover', () => {
+    cursor.textContent = 'contact';
+    cursor.style.width = '4vw';
+    cursor.style.height = '4vw';
+  });
+
+  contact.addEventListener('mouseout', () => {
+    cursor.textContent = '';
+    cursor.style.width = '1vw';
+    cursor.style.height = '1vw';
+  });
+}
+
+for (const navImg of navImgs) {
+  navImg.addEventListener('mouseover', () => {
+    cursor.textContent = 'open';
+    cursor.style.width = '4vw';
+    cursor.style.height = '4vw';
+  });
+
+  navImg.addEventListener('mouseout', () => {
+    cursor.textContent = '';
+    cursor.style.width = '1vw';
+    cursor.style.height = '1vw';
+  });
+}
