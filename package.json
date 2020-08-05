@@ -44,7 +44,8 @@
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --config=config/webpack.dev.js",
+    "start": "node server",
+    "client": "webpack-dev-server --open --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.prod.js",
     "lint:js": "eslint ./src",
     "lint:css": "stylelint ./src",
@@ -57,7 +58,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "core-js": "3"
+    "core-js": "3",
+    "express": "^4.17.1"
   },
   "browserslist": [
     "> 1%",
