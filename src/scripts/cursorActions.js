@@ -38,7 +38,8 @@ for (const navImg of navImgs) {
   });
 }
 
-const links = document.querySelectorAll('li, .logo, .clients__info, .contacts, button');
+const links = document.querySelectorAll(
+  'li, .logo, .clients__info, .contacts, button');
 
 for (const link of links) {
   link.addEventListener('mouseover', () => {

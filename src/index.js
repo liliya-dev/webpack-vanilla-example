@@ -52,14 +52,13 @@ for (let i = 2; i < 7; i = i + 2) {
   });
 }
 
-const headerCenter = document.querySelector('.header__center');
+setTimeout(startLoadingListener, 1000);
 
-headerCenter.addEventListener('click', startLoadingListener, false);
 
 const controller = new ScrollMagic.Controller({
   globalSceneOptions: {
     triggerHook: 'onLeave',
-    duration: '200%',
+    duration: '600%',
   },
 });
 
